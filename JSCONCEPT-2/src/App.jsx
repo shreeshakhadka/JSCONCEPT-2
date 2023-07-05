@@ -25,14 +25,17 @@ function App() {
     <div>
       <h1>Product Details</h1>
       {products.map((product, index) => (
-        <div key={index}>
+        <div key={index} className ="product-container">
           <h2>{product.name}</h2>
-          <p>Price: {product.price}</p>
-          <p>Quantity: {calculateTotalPrice(product)}</p>
+          <p>Price: ${product.price}</p>
+          <p>Quantity: {product.quantity}</p>
+          <p>Total Price: ${calculateTotalPrice(product)}</p>
         </div>
       ))}
     </div>
   )
+
+  
 }
 
 export default App
